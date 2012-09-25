@@ -88,6 +88,8 @@ nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
+" Ignore whitespace when in diff mode
+set diffopt+=iwhite
 
 " A little bit of mapping
 nmap <F1> :tabp<CR>
