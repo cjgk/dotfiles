@@ -120,17 +120,20 @@ set autoread
 vnoremap < <gv
 vnoremap > >gv
 
+" No more Ex-mode!
+map Q <Nop>
+
 " Set ctrlp to not care about working path
 let g:ctrlp_working_path_mode = 0
 
 set report=0
 
-fun! <SID>StripTrailingWhitespaces()
-	let l = getpos(".")
-	%s/\s\+$//e
-	call setpos('.', l)
-endfun
-autocmd BufWritePre *.[cChH][cChH]?,*.php,*.py :call <SID>StripTrailingWhitespaces()
+"fun! <SID>StripTrailingWhitespaces()
+"	let l = getpos(".")
+"	%s/\s\+$//e
+"	call setpos('.', l)
+"endfun
+" autocmd BufWritePre *.[cChH][cChH]?,*.php,*.py :call <SID>StripTrailingWhitespaces()
 
 call pathogen#infect()
 
