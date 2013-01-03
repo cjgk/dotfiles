@@ -46,7 +46,7 @@ set statusline+=\ %3v,%3l/%L " Vertical pos,horisontal pos/totalrows
 set laststatus=2
 
 " Show a line at 80 columns
-set colorcolumn=80
+" set colorcolumn=80
 
 " Show ruler (unnecessary if having statusline?), current mode, line number 
 set ruler
