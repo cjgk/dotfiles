@@ -40,6 +40,7 @@ set statusline=%F          " Filename
 set statusline+=%m         " Modified?
 set statusline+=%r         " Readonly?
 set statusline+=%=         " Separator
+set statusline+=%{fugitive#statusline()}
 set statusline+=[%{&ff},   " File format and encoding
 set statusline+=%{strlen(&fenc)?&fenc:'none'}]
 set statusline+=\ %3v,%3l/%L " Vertical pos,horisontal pos/totalrows

@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/usr/share/php/libzend-framework-php/Zend/Controller/Action'
-let g:netrw_dirhist_2='/usr/share/php/libzend-framework-php/Zend/Controller/Action/Helper'
-let g:netrw_dirhist_3='/var/www/cm/dev/application/views/scripts/pricelist'
-let g:netrw_dirhist_4='/var/www/vakt/dev/application/forms'
