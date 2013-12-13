@@ -5,4 +5,7 @@
 	helper = cache --timeout=3600
 [color]
     ui = auto
-
+[alias]
+    st = status
+    co = checkout
+    ci = commit
