@@ -1,6 +1,6 @@
 [user]
 	name = Jonas Karlsson
-	email = jonasc@gmail.com
+	email = jonas.karlsson@stim.se
 [credential]
 	helper = cache --timeout=3600
 [color]
@@ -9,3 +9,4 @@
     st = status
     co = checkout
     ci = commit
+[diff]
