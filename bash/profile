@@ -87,7 +87,10 @@ if [ `uname` == "Darwin" ]; then
 else
   alias ls='ls --color=auto'
 fi
-export PATH=~/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:~/.bin:$PATH:~/.gem/ruby/1.8/bin
+
+export GOPATH=$HOME/Code/Go
+
+export PATH=~/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:~/.bin:$GOPATH/bin:$PATH:~/.gem/ruby/1.8/bin
 export IGNOREEOF=1
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONPATH=~/Development/pygments-main/
@@ -147,6 +150,8 @@ alias pypy-jitlog="PYPYLOG=jit-log-opt,jit-backend-counts:pypyjitlog.log pypy-c"
 alias ..='cd ..'
 shopt -s histappend
 
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
+
 if [ -f /usr/local/git/contrib/completion ]; then
   . /usr/local/git/contrib/completion/git-completion.bash
 fi
@@ -160,6 +165,13 @@ VIRTUAL_ENV_DISABLE_PROMPT=1
 # for the lulz
 alias bitch,=sudo
 
+# vm aliases
+alias vmdevstart='vboxmanage startvm dev --type headless'
+alias vmdevkill='vboxmanage controlvm dev poweroff'
+alias vmdevacpi='vboxmanage controlvm dev acpipowerbutton'
+alias vmdevmysql='mysql -h dev -u diabolik -pdanger'
+
+alias ack='ack-grep'
 # hack to get ppc out of that thing
 export ARCHFLAGS="-arch i386 -arch x86_64"
 
