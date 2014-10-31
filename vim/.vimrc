@@ -138,10 +138,3 @@ au! BufWritePost .vimrc source %
 " Load ctrlp
 let g:ctrlp_working_path_mode = 0
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-
-" Set up Vdebug
-let g:vdebug_options = {
-\   "server": "0.0.0.0",
-\   "break_on_open": 0,
-\   "path_maps": {"/mnt/host_www/": "/home/stjk04/Code/Work/", "/usr/share/php5/libzend-framework-php" : "/home/stjk04/Code/Work/"}
-\}

@@ -82,7 +82,7 @@ export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export CLICOLOR=1
 if [ `uname` == "Darwin" ]; then
   export LSCOLORS=ExGxFxDxCxHxHxCbCeEbEb
-  alias vim='mvim -v'
+  #alias vim='mvim -v'
   alias ls='ls -GpFh'
 else
   alias ls='ls --color=auto'
