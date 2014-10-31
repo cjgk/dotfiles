@@ -1,6 +1,3 @@
-[user]
-	name = Jonas Karlsson
-	email = jonas.karlsson@stim.se
 [credential]
 	helper = cache --timeout=3600
 [color]
