@@ -58,6 +58,7 @@ set incsearch
 
 " Autoindent, indentation steps, show active line
 set autoindent smartindent
+" filetype plugin on
 set shiftwidth=4 tabstop=4 softtabstop=4
 set expandtab
 set cursorline
@@ -89,6 +90,7 @@ set diffopt+=iwhite
 " A little bit of mapping
 nmap <F1> :tabp<CR>
 nmap <F2> :tabn<CR>
+nmap <F8> :TagbarToggle<CR>
 set pastetoggle=<F3> 
 nnoremap <F4> :NumbersToggle<CR>
 inoremap jj <ESC>
@@ -127,10 +129,15 @@ map Q <Nop>
 " Leaders
 nmap <leader>s @s 
 nmap <leader>l :set list!<CR>
+nmap <leader>n :noh<CR>
 
 set report=0
 
 call pathogen#infect()
+
+autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
+autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
+
 
 " Saving vimrc sources the buffer contents
 au! BufWritePost .vimrc source %
