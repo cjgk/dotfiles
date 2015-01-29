@@ -3,7 +3,11 @@
 [color]
     ui = auto
 [alias]
-    st = status
+    st = status -sb
     co = checkout
     ci = commit
+    wdiff = diff --word-diff
 [diff]
+[user]
+	name = Jonas Karlsson
+	email = jonas.karlsson@stim.se
