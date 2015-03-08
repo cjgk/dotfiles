@@ -12,7 +12,7 @@ export LC_CTYPE=en_US.utf-8
 export GOROOT=`go env GOROOT`
 export GOPATH=~/go
 
-export PATH=~/bin:$GOPATH/bin:$PATH
+export PATH=~/bin:~/stdev/bin:$GOPATH/bin:$PATH
 
 # Colours
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
@@ -42,12 +42,8 @@ gitinfo() {
     [ -z "$gitroot" ] && return
     
     status=`git status --porcelain --branch`
-
-    # Get branch name
-    if [[ $status =~ ^##[[:space:]](.*)\.\.\. ]]; 
-    then
-        branch=${BASH_REMATCH[1]}
-    fi
+    branch=`echo "$status" | head -n1 | cut -c 4-`
+    branch=${branch%...*}
 
     # Count staged changes, unstaged changes, unversioned files
     staged=`echo "$status" | grep -e '^M\|A' | wc -l | tr -d ' '`

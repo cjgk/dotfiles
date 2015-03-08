@@ -58,7 +58,6 @@ set incsearch
 
 " Autoindent, indentation steps, show active line
 set autoindent smartindent
-" filetype plugin on
 set shiftwidth=4 tabstop=4 softtabstop=4
 set expandtab
 set cursorline
@@ -79,7 +78,7 @@ set novisualbell
 set t_vb=
 
 " Copy condensed SQL
-let @s = "vip:j:.w ! perl -pe 'chomp' | xclip -selection clipboardu"
+let @s = "vip:j:.w ! perl -pe 'chomp' | pbcopyu"
  
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
@@ -133,11 +132,14 @@ nmap <leader>n :noh<CR>
 
 set report=0
 
+filetype plugin indent on
 call pathogen#infect()
+
 
 autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 
+"let g:go_fmt_autosave = 1
 
 " Saving vimrc sources the buffer contents
 au! BufWritePost .vimrc source %
