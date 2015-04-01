@@ -1,14 +1,24 @@
 set nocompatible
-
-" Syntax coloring
 syntax on
-
-" Need this for work
 set encoding=utf8
 
-" 256 color and zenburn
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'fatih/vim-go'
+Plugin 'groenewege/vim-less'
+Plugin 'kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'myusuf3/numbers.vim'
+Plugin 'jplaut/vim-arduino-ino'
+
+call vundle#end()
+
+filetype plugin indent on   
+
 set t_Co=256 
-"let g:zenburn_force_dark_Background = 1
 colorscheme Tomorrow-Night
 
 " Highlight search 
@@ -132,18 +142,19 @@ nmap <leader>n :noh<CR>
 
 set report=0
 
-filetype plugin indent on
-call pathogen#infect()
-
 
 autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 
-"let g:go_fmt_autosave = 1
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
 
 " Saving vimrc sources the buffer contents
 au! BufWritePost .vimrc source %
 
 " Load ctrlp
 let g:ctrlp_working_path_mode = 0
-set runtimepath^=~/.vim/bundle/ctrlp.vim
