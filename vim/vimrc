@@ -125,6 +125,8 @@ map Q <Nop>
 nmap <leader>s @s 
 nmap <leader>l :set list!<CR>
 nmap <leader>n :noh<CR>
+nmap <leader>ö :b#<CR>
+nmap <leader>w :bd<CR>
 
 set report=0
 
