@@ -6,4 +6,5 @@ vim/bundle/vim-arduino-ino
 vim/bundle/vim-fugitive
 vim/bundle/vim-go
 vim/bundle/vim-less
-
+vim/bundle/vim-javascript-syntax
+vim/bundle/javascript-libraries-syntax.vim
