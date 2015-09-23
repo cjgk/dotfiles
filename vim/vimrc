@@ -125,6 +125,8 @@ map Q <Nop>
 nmap <leader>s @s 
 nmap <leader>l :set list!<CR>
 nmap <leader>n :noh<CR>
+nmap <leader>ö :b#<CR>
+nmap <leader>w :bd<CR>
 
 set report=0
 
@@ -147,3 +149,6 @@ au! BufWritePost .vimrc source %
 " Load ctrlp
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_custom_ignore = 'node_modules'
+
+" JS lib syntax
+let g:used_javascript_libs = 'react,flux'
