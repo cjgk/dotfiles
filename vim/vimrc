@@ -132,6 +132,8 @@ set report=0
 autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 
+au BufRead,BufNewFile *.es6 setfiletype javascript
+
 let g:go_fmt_autosave = 1
 let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
