@@ -11,11 +11,16 @@ Plugin 'fatih/vim-go'
 Plugin 'groenewege/vim-less'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
-Plugin 'myusuf3/numbers.vim'
 Plugin 'jplaut/vim-arduino-ino'
 Plugin 'othree/yajs.vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'StanAngeloff/php.vim'
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'm2mdas/phpcomplete-extended'
+
 
 call vundle#end()
 

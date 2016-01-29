@@ -8,3 +8,9 @@ vim/bundle/vim-go
 vim/bundle/vim-less
 vim/bundle/vim-javascript-syntax
 vim/bundle/javascript-libraries-syntax.vim
+vim/bundle/yajs.vim
+vim/bundle/php.vim/
+vim/bundle/phpcomplete-extended/
+vim/bundle/tabular/
+vim/bundle/unite.vim/
+vim/bundle/vimproc.vim/
