@@ -50,6 +50,7 @@ gitinfo() {
 
 # Prompt
 PS1='\n'${t_yellow}'\u'${t_reset}' @ \h in '${t_purple}'\w'${t_reset}' `gitinfo` `bgjobs` \n\$ '
+#PS1='\n'${t_yellow}'\u'${t_reset}' @ \h in '${t_purple}'\w'${t_reset}' `bgjobs` \n\$ '
 
 # Aliases
 alias tree="tree --dirsfirst -F"
