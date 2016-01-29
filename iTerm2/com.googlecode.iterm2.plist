@@ -248,7 +248,7 @@
 	<key>DimInactiveSplitPanes</key>
 	<true/>
 	<key>DimOnlyText</key>
-	<false/>
+	<true/>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
 	<key>EnableRendezvous</key>
@@ -305,16 +305,32 @@
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
+	<key>NSToolbar Configuration Terminal Toolbar</key>
+	<dict>
+		<key>TB Display Mode</key>
+		<integer>1</integer>
+		<key>TB Icon Size Mode</key>
+		<integer>1</integer>
+		<key>TB Is Shown</key>
+		<integer>0</integer>
+		<key>TB Size Mode</key>
+		<integer>1</integer>
+	</dict>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>606 37 665 221 0 0 1440 877 </string>
+	<string>794 298 665 82 0 0 3008 1669 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>326 932 924 485 0 0 2560 1417 </string>
+	<string>1162 752 924 485 0 0 3840 2137 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 544 1424 873 0 0 2560 1417 </string>
+	<string>1921 18 1914 2119 0 0 3840 2137 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>896 394 780 1023 0 0 2560 1417 </string>
+	<string>1347 4 2488 2133 0 0 3840 2137 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>156 1144 192 273 0 0 2560 1417 </string>
+	<string>1536 4 1151 2133 0 0 3840 2137 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>1457 419 696 423 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
@@ -477,11 +493,11 @@
 			<key>Background Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.12941177189350128</real>
+				<real>0.14901961386203766</real>
 				<key>Green Component</key>
-				<real>0.12156862765550613</real>
+				<real>0.14901961386203766</real>
 				<key>Red Component</key>
-				<real>0.11372549086809158</real>
+				<real>0.14901961386203766</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -1047,6 +1063,10 @@
 	</array>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
+	<key>NoSyncTimeOfLastPromo</key>
+	<real>453624522.98782498</real>
+	<key>NoSyncTimeOfLastPromoDownload</key>
+	<real>472567696.450028</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1105,11 +1125,11 @@
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedURL</key>
-	<string>http://iterm2.com/appcasts/testing.xml</string>
+	<string>https://iterm2.com/appcasts/testing.xml</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-03-09T15:55:37Z</date>
+	<date>2015-12-23T02:56:20Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1155,6 +1175,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.0.0.20141103</string>
+	<string>2.1.4</string>
 </dict>
 </plist>
