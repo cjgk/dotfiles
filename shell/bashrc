@@ -28,24 +28,28 @@ bgjobs() {
 }
 
 gitinfo() {
-    gitroot=`git rev-parse --show-toplevel 2> /dev/null`
+    if hash vcprompt 2>/dev/null; then
+        vcprompt -f %n %b %m
+    else
+        gitroot=`git rev-parse --show-toplevel 2> /dev/null`
 
-    [ -z "$gitroot" ] && return
-    
-    status=`git status --porcelain --branch`
-    branch=`echo "$status" | head -n1 | cut -c 4-`
-    branch=${branch%...*}
+        [ -z "$gitroot" ] && return
+        
+        status=`git status --porcelain --branch`
+        branch=`echo "$status" | head -n1 | cut -c 4-`
+        branch=${branch%...*}
 
-    # Count staged changes, unstaged changes, unversioned files
-    staged=`echo "$status" | grep -e '^M\|A' | wc -l | tr -d ' '`
-    unstaged=`echo "$status" | grep '^ M' | wc -l | tr -d ' '`
-    unversioned=`echo "$status" | grep '^?' | wc -l | tr -d ' '`
+        # Count staged changes, unstaged changes, unversioned files
+        staged=`echo "$status" | grep -e '^M\|A' | wc -l | tr -d ' '`
+        unstaged=`echo "$status" | grep '^ M' | wc -l | tr -d ' '`
+        unversioned=`echo "$status" | grep '^?' | wc -l | tr -d ' '`
 
-    if [ -n $staged ]; then staged="*${staged}"; fi
-    if [ -n $unstaged ]; then unstaged="+${unstaged}"; fi
-    if [ -n $unversioned ]; then unversioned="?${unversioned}"; fi
+        if [ -n $staged ]; then staged="*${staged}"; fi
+        if [ -n $unstaged ]; then unstaged="+${unstaged}"; fi
+        if [ -n $unversioned ]; then unversioned="?${unversioned}"; fi
 
-    echo -e "[${t_green}${branch}${t_reset} ${staged} ${unstaged} ${unversioned}]"
+        echo -e "[${t_green}${branch}${t_reset} ${staged} ${unstaged} ${unversioned}]"
+    fi
 }
 
 # Prompt

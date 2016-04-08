@@ -18,8 +18,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'Shougo/unite.vim'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'm2mdas/phpcomplete-extended'
+Plugin 'joonty/vdebug'
 
 
 call vundle#end()

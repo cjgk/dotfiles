@@ -63,6 +63,7 @@ set history=400
 :set timeout timeoutlen=1000 ttimeoutlen=100
 
 " Tab completion when opening new file
+set wildmode=longest,list,full
 set wildmenu
 
 " No idea
@@ -161,4 +162,4 @@ let g:ctrlp_custom_ignore = 'node_modules'
 let g:used_javascript_libs = 'react,flux'
 
 " PHP Complete
-autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
+"autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
