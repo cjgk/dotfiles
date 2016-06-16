@@ -35,7 +35,8 @@ set statusline+=%r         " Readonly?
 set statusline+=%=         " Separator
 set statusline+=%{fugitive#statusline()}
 set statusline+=[%{&ff},   " File format and encoding
-set statusline+=%{strlen(&fenc)?&fenc:'none'}]
+set statusline+=%{strlen(&fenc)?&fenc:'none'},
+set statusline+=%y]
 set statusline+=\ %3v,%3l/%L " Vertical pos,horisontal pos/totalrows
 set laststatus=2
 
@@ -46,8 +47,13 @@ set colorcolumn=80
 set ruler
 set showmode
 set number
-"set relativenumber
 set numberwidth=5
+
+" Folding
+set foldmethod=syntax
+set foldlevel=0
+set foldnestmax=1
+set foldlevelstart=1
 
 " Match searces as typing
 set incsearch
@@ -150,6 +156,7 @@ let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
+au FileType go nmap <leader>i <Plug>(go-install)
 
 " Saving vimrc sources the buffer contents
 au! BufWritePost .vimrc source %
