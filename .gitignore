@@ -14,3 +14,5 @@ vim/bundle/phpcomplete-extended/
 vim/bundle/tabular/
 vim/bundle/unite.vim/
 vim/bundle/vimproc.vim/
+vim/bundle/editorconfig-vim/
+vim/bundle/vdebug/
