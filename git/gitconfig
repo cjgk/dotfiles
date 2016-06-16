@@ -5,7 +5,7 @@
 [alias]
     st = status -sb
     co = checkout
-    ci = commit
+    ci = commit --verbose
     wdiff = diff --word-diff
 [diff]
 [user]
