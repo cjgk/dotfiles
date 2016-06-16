@@ -78,6 +78,9 @@ bind '"\e[24~":"\C-k \C-ugit status -sb\n"' #F12 for git status
 
 # Plugins
 if hash brew 2>/dev/null; then
+    if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
+        . $(brew --prefix)/share/bash-completion/bash_completion
+    fi
     if [ -f $(brew --prefix)/etc/bash_completion ]; then
         . $(brew --prefix)/etc/bash_completion
     fi
