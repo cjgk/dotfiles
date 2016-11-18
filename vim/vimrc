@@ -51,9 +51,10 @@ set numberwidth=5
 
 " Folding
 set foldmethod=syntax
-set foldlevel=0
+set foldlevel=2
 set foldnestmax=1
 set foldlevelstart=1
+autocmd FileType javascript setlocal foldnestmax=2
 
 " Match searces as typing
 set incsearch
@@ -134,6 +135,7 @@ nmap <leader>l :set list!<CR>
 nmap <leader>n :noh<CR>
 nmap <leader>ö :b#<CR>
 nmap <leader>w :bd<CR>
+nmap <leader>i :GoInstall<CR>
 
 if exists(":Tabularize")
     nmap <leader>0 :'<,'>Tabularize/=<CR>

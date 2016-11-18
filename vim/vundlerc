@@ -20,7 +20,8 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'joonty/vdebug'
 Plugin 'editorconfig/editorconfig-vim'
-
+Plugin 'Konfekt/FastFold'
+Plugin 'ledger/vim-ledger'
 
 call vundle#end()
 

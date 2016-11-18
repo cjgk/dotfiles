@@ -62,6 +62,7 @@ alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b
 alias gitfiles='git status | grep -P "#\t" | cut -c 15-'
 alias gofmtproj='go fmt ./...'
 alias tmux='tmux -2'
+alias dc='docker-compose'
 
 if [ x`which ack-grep 2>/dev/null` != x ]; then
   alias ack=ack-grep
