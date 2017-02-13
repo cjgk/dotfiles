@@ -9,6 +9,7 @@ ln -sf $(pwd)/shell/bashrc ~/.bashrc
 ln -sf $(pwd)/git/gitconfig ~/.gitconfig
 ln -sf $(pwd)/tmux/tmux.conf ~/.tmux.conf
 ln -sf $(pwd)/docker ~/.docker
+ln -sf $(pwd)/karabiner ~/.config/karabiner
 
 if [ -e ~/.vim/vundlerc ]; then
     vim -u ~/.vim/vundlerc +PluginInstall +qall

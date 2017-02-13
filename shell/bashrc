@@ -63,6 +63,7 @@ alias gitfiles='git status | grep -P "#\t" | cut -c 15-'
 alias gofmtproj='go fmt ./...'
 alias tmux='tmux -2'
 alias dc='docker-compose'
+alias docker-killemall='docker rm -f $(docker ps -a --format "{{.ID}}"'
 
 if [ x`which ack-grep 2>/dev/null` != x ]; then
   alias ack=ack-grep
