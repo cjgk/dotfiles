@@ -1,4 +1,16 @@
 {
-    "psFormat": "table {{.Names}}\t{{.Command}}\t{{.Status}}\t{{.Ports}}",
-    "imagesFormat": "table {{.ID}}\\t{{.Repository}}\\t{{.Tag}}\\t{{.CreatedAt}}"
+  "auths" : {
+    "https://595468017717.dkr.ecr.eu-west-1.amazonaws.com" : {
+
+    },
+    "595468017717.dkr.ecr.eu-west-1.amazonaws.com" : {
+
+    }
+  },
+  "HttpHeaders" : {
+    "User-Agent" : "Docker-Client/17.12.0-ce (darwin)"
+  },
+  "imagesFormat" : "table {{.ID}}\\t{{.Repository}}\\t{{.Tag}}\\t{{.CreatedAt}}",
+  "credsStore" : "osxkeychain",
+  "psFormat" : "table {{.Names}}\t{{.Command}}\t{{.Status}}\t{{.Ports}}"
 }
