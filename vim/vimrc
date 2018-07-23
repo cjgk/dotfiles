@@ -5,7 +5,11 @@ source ~/.vim/vundlerc
 set encoding=utf8
 
 set t_Co=256 
-colorscheme Tomorrow-Night
+" Dark background
+ set bg=dark
+ colorscheme solarized
+" colorscheme Tomorrow-Night
+" colorscheme acme
 
 " Highlight search 
 set hls
@@ -16,8 +20,6 @@ let mapleader = ","
 " Allow backspace over autoindent and line breaks
 set bs=2 
 
-" Dark background
-set bg=dark
 
 " Case insensitivity in searches
 set ignorecase smartcase
@@ -41,7 +43,7 @@ set statusline+=\ %3v,%3l/%L " Vertical pos,horisontal pos/totalrows
 set laststatus=2
 
 " Show a line at 80 columns
-set colorcolumn=80
+" set colorcolumn=80
 
 " Show ruler (unnecessary if having statusline?), current mode, line number 
 set ruler
@@ -50,11 +52,11 @@ set number
 set numberwidth=5
 
 " Folding
-set foldmethod=syntax
-set foldlevel=2
-set foldnestmax=1
-set foldlevelstart=1
-autocmd FileType javascript setlocal foldnestmax=2
+" set foldmethod=syntax
+" set foldlevel=2
+" set foldnestmax=1
+" set foldlevelstart=1
+"autocmd FileType javascript setlocal foldnestmax=2
 
 " Match searces as typing
 set incsearch
@@ -97,10 +99,15 @@ nmap <Space> za
 set pastetoggle=<F3> 
 nnoremap <F4> :NumbersToggle<CR>
 inoremap jj <ESC>
+nnoremap <NL> i<CR><ESC>
+map <F1> <Esc>
+imap <F1> <Esc>
 
 " Correct my fat finger fibbles
 :command! W w
 :command! Q q
+:command! B b
+:command! Bd bd
 
 " Disable arrow keys
 nnoremap <up> <nop>
@@ -172,3 +179,7 @@ let g:used_javascript_libs = 'react,flux'
 
 " PHP Complete
 "autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
+
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif

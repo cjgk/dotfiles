@@ -8,20 +8,11 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-fugitive'
 Plugin 'fatih/vim-go'
-Plugin 'groenewege/vim-less'
 Plugin 'kien/ctrlp.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'jplaut/vim-arduino-ino'
-Plugin 'othree/yajs.vim'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'StanAngeloff/php.vim'
-Plugin 'Shougo/unite.vim'
-Plugin 'joonty/vdebug'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'Konfekt/FastFold'
-Plugin 'ledger/vim-ledger'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 
