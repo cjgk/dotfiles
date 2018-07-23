@@ -7,6 +7,7 @@
     co = checkout
     ci = commit --verbose
     wdiff = diff --word-diff
+    squash = rebase --interactive --autosquash master
 [diff]
 [user]
 	name = Jonas Hässel
