@@ -11,6 +11,9 @@ export GOPATH=$HOME/go
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 export VAGRANT_VMWARE_CLONE_DIRECTORY=~/Documents/VagrantMachines
 
+# Ansible
+export ANSIBLE_VAULT_PASSWORD_FILE=~/.secrets/ansible-vault.txt
+
 # Path
 export PATH=$HOME/bin:$GOROOT/bin:$GOPATH/bin:$PATH
 
@@ -23,4 +26,7 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 umask 0002
-PATH=/Users/jonas.hassel/development-environment/bin:$PATH
+PATH=/Users/jonas.hassel/development-environment/bin:/Users/jonas.hassel/.composer/vendor/bin:$PATH
+
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

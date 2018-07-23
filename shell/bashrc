@@ -8,7 +8,7 @@ export EDITOR=vim
 # Colours
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export CLICOLOR=0
-export LSCOLORS=ExGxFxDxCxHxHxCbCeEbEb
+#export LSCOLORS=ExGxFxDxCxHxHxCbCeEbEb
 
 t_reset='\033[0;0m' 
 t_red='\033[0;31m'
@@ -55,7 +55,9 @@ gitinfo() {
 }
 
 # Prompt
-PS1='\n'${t_yellow}'\u'${t_reset}' @ \h in '${t_purple}'\w'${t_reset}' `gitinfo` `bgjobs` \n\$ '
+PS1='\n\u'${t_reset}' @ \h in '${t_purple}'\w'${t_reset}' `gitinfo` `bgjobs` \n\$ '
+#PS1='\n'${t_yellow}'\u'${t_reset}' @ \h in '${t_purple}'\w'${t_reset}' `gitinfo` `bgjobs` \n\$ '
+#PS1='\n\[$(iterm2_prompt_mark)\] '${t_yellow}'\u'${t_reset}' @ \h in '${t_purple}'\w'${t_reset}' `gitinfo` `bgjobs` \n\$ '
 #PS1='\n'${t_yellow}'\u'${t_reset}' @ \h in '${t_purple}'\w'${t_reset}' `bgjobs` \n\$ '
 
 # Aliases
@@ -66,6 +68,7 @@ alias gofmtproj='go fmt ./...'
 alias tmux='tmux -2'
 alias dc='docker-compose'
 alias docker-killemall='docker rm -f $(docker ps -a --format "{{.ID}}")'
+alias docker-time='docker run --rm --privileged alpine hwclock -s'
 
 if [ x`which ack-grep 2>/dev/null` != x ]; then
   alias ack=ack-grep
@@ -95,3 +98,10 @@ elif ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# TmuxP completion
+eval "$(_TMUXP_COMPLETE=source tmuxp)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
