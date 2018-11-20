@@ -5,11 +5,8 @@ source ~/.vim/vundlerc
 set encoding=utf8
 
 set t_Co=256 
-" Dark background
- set bg=dark
- colorscheme solarized
-" colorscheme Tomorrow-Night
-" colorscheme acme
+" set bg=dark
+" colorscheme solarized
 
 " Highlight search 
 set hls
@@ -20,7 +17,6 @@ let mapleader = ","
 " Allow backspace over autoindent and line breaks
 set bs=2 
 
-
 " Case insensitivity in searches
 set ignorecase smartcase
 
@@ -30,33 +26,33 @@ set shm=at
 " Don't show a title
 set notitle
 
+" Allow switching away from unsaved buffer
+set hidden
+
 " Overworked statusline
 set statusline=%F          " Filename
 set statusline+=%m         " Modified?
 set statusline+=%r         " Readonly?
 set statusline+=%=         " Separator
-set statusline+=%{fugitive#statusline()}
 set statusline+=[%{&ff},   " File format and encoding
 set statusline+=%{strlen(&fenc)?&fenc:'none'},
 set statusline+=%y]
 set statusline+=\ %3v,%3l/%L " Vertical pos,horisontal pos/totalrows
 set laststatus=2
 
-" Show a line at 80 columns
-" set colorcolumn=80
+" Browser
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_banner = 0
+let g:netrw_winsize = 20
+
+
 
 " Show ruler (unnecessary if having statusline?), current mode, line number 
 set ruler
 set showmode
 set number
 set numberwidth=5
-
-" Folding
-" set foldmethod=syntax
-" set foldlevel=2
-" set foldnestmax=1
-" set foldlevelstart=1
-"autocmd FileType javascript setlocal foldnestmax=2
 
 " Match searces as typing
 set incsearch
@@ -65,7 +61,6 @@ set incsearch
 set autoindent smartindent
 set shiftwidth=4 tabstop=4 softtabstop=4
 set expandtab
-"set cursorline
 set history=400
 
 " Remove delays after hitting ESC
@@ -83,9 +78,6 @@ set noerrorbells
 set novisualbell
 set t_vb=
 
-" Copy condensed SQL
-let @s = "vip:j:.w ! perl -pe 'chomp' | pbcopyu"
- 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
@@ -94,10 +86,8 @@ set diffopt+=iwhite
 
 " A little bit of mapping
 "imap <F10> <C-x><C-o>
-nmap <F8> :TagbarToggle<CR>
 nmap <Space> za
 set pastetoggle=<F3> 
-nnoremap <F4> :NumbersToggle<CR>
 inoremap jj <ESC>
 nnoremap <NL> i<CR><ESC>
 map <F1> <Esc>
@@ -143,6 +133,9 @@ nmap <leader>n :noh<CR>
 nmap <leader>ö :b#<CR>
 nmap <leader>w :bd<CR>
 nmap <leader>i :GoInstall<CR>
+nmap <leader>b :GoBuild<CR>
+nmap <leader>t :GoTest<CR>
+nmap <leader>e :Vexplore<CR>
 
 if exists(":Tabularize")
     nmap <leader>0 :'<,'>Tabularize/=<CR>
@@ -153,9 +146,6 @@ endif
 
 set report=0
 
-
-autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
-autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 
 au BufRead,BufNewFile *.es6 setfiletype javascript
 
@@ -172,14 +162,11 @@ au! BufWritePost .vimrc source %
 
 " Load ctrlp
 let g:ctrlp_working_path_mode = 0
-let g:ctrlp_custom_ignore = 'node_modules'
+let g:ctrlp_custom_ignore = '\vnode_modules|vendor'
 
 " JS lib syntax
 let g:used_javascript_libs = 'react,flux'
 
-" PHP Complete
-"autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
-
-if executable('ag')
-    let g:ackprg = 'ag --vimgrep'
-endif
+"if executable('ag')
+"    let g:ackprg = 'ag --vimgrep'
+"endif
