@@ -9,7 +9,7 @@ set notitle
 set hid "Change buffer without saving
 
 call plug#begin('~/.local/share/nvim/plugged')
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'StanAngeloff/php.vim'
@@ -17,15 +17,15 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'rayburgemeestre/phpfolding.vim'
 Plug 'zxqfl/tabnine-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'hashivim/vim-terraform'
 Plug 'vim-syntastic/syntastic'
-Plug 'juliosueiras/vim-terraform-completion'
+Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
+
 call plug#end()
 
 set background=dark
 
-let g:solarized_termcolors=16
-colorscheme solarized
 
 filetype plugin indent on   
 
@@ -55,6 +55,9 @@ set autoindent smartindent
 set shiftwidth=4 tabstop=4 softtabstop=4
 set expandtab
 set history=400
+
+" Javascript
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 
 " Remove delays after hitting ESC
 set timeout timeoutlen=1000 ttimeoutlen=10

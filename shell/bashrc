@@ -6,7 +6,7 @@ export TERM=xterm-256color
 export EDITOR=vim
 
 # Colours
-export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+export GREP_COLOR='1;32'
 export CLICOLOR=0
 #export LSCOLORS=ExGxFxDxCxHxHxCbCeEbEb
 
@@ -61,14 +61,15 @@ PS1='\n\u'${t_reset}' @ \h in '${t_purple}'\w'${t_reset}' `gitinfo` `bgjobs` \n\
 #PS1='\n'${t_yellow}'\u'${t_reset}' @ \h in '${t_purple}'\w'${t_reset}' `bgjobs` \n\$ '
 
 # Aliases
+alias grep='grep --color=auto'
 alias tree="tree --dirsfirst -F"
 alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
 alias gitfiles='git status | grep -P "#\t" | cut -c 15-'
-alias gofmtproj='go fmt ./...'
 alias tmux='tmux -2'
 alias dc='docker-compose'
 alias docker-killemall='docker rm -f $(docker ps -a --format "{{.ID}}")'
-alias docker-time='docker run --rm --privileged alpine hwclock -s'
+alias vim="nvim"
+alias fd="fdfind"
 
 if [ x`which ack-grep 2>/dev/null` != x ]; then
   alias ack=ack-grep
@@ -105,3 +106,6 @@ eval "$(_TMUXP_COMPLETE=source tmuxp)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# FZF
+export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git'
