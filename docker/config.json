@@ -11,6 +11,5 @@
     "User-Agent" : "Docker-Client/17.12.0-ce (darwin)"
   },
   "imagesFormat" : "table {{.ID}}\\t{{.Repository}}\\t{{.Tag}}\\t{{.CreatedAt}}",
-  "credsStore" : "osxkeychain",
   "psFormat" : "table {{.Names}}\t{{.Command}}\t{{.Status}}\t{{.Ports}}"
 }
